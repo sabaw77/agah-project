@@ -1,15 +1,12 @@
 import { async, ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
 
 import { CompaniesComponent } from './companies.component';
-import { DebugElement } from '@angular/core';
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommunicationService } from '../services/communication.service';
-import { By } from '@angular/platform-browser';
-import { ModalComponent } from '../modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, empty, BehaviorSubject, of } from 'rxjs';
 import { CompanyDataBaseSimulationInterface } from '../interfaces/companies/company.interface';
-
 
 class communicationServiceStub {
   company: BehaviorSubject<CompanyDataBaseSimulationInterface> = new BehaviorSubject({
@@ -38,11 +35,12 @@ describe('CompaniesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      declarations: [CompaniesComponent, ModalComponent],
+      declarations: [CompaniesComponent],
       providers: [
         { provide: Router, useClass: RouterStub },
         { provide: CommunicationService, useClass: communicationServiceStub }
       ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();
   }));

@@ -1,9 +1,10 @@
-import { async, ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CompanyProductsComponent } from './company-products.component';
 import { BehaviorSubject, of } from 'rxjs';
 import { CompanyDataBaseSimulationInterface } from '../interfaces/companies/company.interface';
 import { CommunicationService } from '../services/communication.service';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 class communicationServiceStub {
   company: BehaviorSubject<CompanyDataBaseSimulationInterface> = new BehaviorSubject({
@@ -24,7 +25,8 @@ describe('CompanyProductsComponent', () => {
       declarations: [CompanyProductsComponent],
       providers: [
         { provide: CommunicationService, useClass: communicationServiceStub }
-      ]
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();
   }));
