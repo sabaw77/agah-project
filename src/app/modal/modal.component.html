@@ -1,0 +1,76 @@
+<div (click)="closeModal()" class="modal-backdrop"></div>
+<div class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <ng-content #modalHeader></ng-content>
+
+      <a (click)="closeModal()" class="btn-close" aria-hidden="true">×</a>
+    </div>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div *ngFor="let formElement of inputForm">
+        <div [ngSwitch]="formElement.type">
+          <div class="form-control" *ngSwitchCase="'textBox'">
+            <label for="{{formElement.formControlName}}">
+              <span>
+                {{formElement.label}}
+              </span>
+              <input id="{{formElement.formControlName}}" type="text" placeholder="{{formElement.placeHolder}}"
+                formControlName="{{formElement.formControlName}}" />
+            </label>
+          </div>
+          <div class="form-control" *ngSwitchCase="'number'">
+            <label for="{{formElement.formControlName}}">
+              <span>
+                {{formElement.label}}
+              </span>
+              <input id="{{formElement.formControlName}}" type="number" placeholder="{{formElement.placeHolder}}"
+                formControlName="{{formElement.formControlName}}" />
+            </label>
+          </div>
+          <div class="form-control" *ngSwitchCase="'select'">
+            <label for="{{formElement.formControlName}}">
+              <span>
+                {{formElement.label}}
+              </span>
+              <select id="{{formElement.formControlName}}" formControlName="{{formElement.formControlName}}">
+                <option selected disabled>
+                  {{formElement.placeHolder}}
+                </option>
+                <option *ngFor="let opt of formElement.options">
+                  {{opt}}
+                </option>
+              </select>
+            </label>
+          </div>
+          <div class="form-control" *ngSwitchCase="'radio'">
+            <span class="radio-label">
+              {{formElement.label}}
+            </span>
+            <label *ngFor="let radio of formElement.radioButtons" class="container">
+              <span>
+                {{radio}}
+              </span>
+              <input id="{{formElement.formControlName}}" formControlName="{{formElement.formControlName}}"
+                value="{{radio}}" type="radio">
+              <span class="check"></span>
+            </label>
+          </div>
+          <div class="form-control" *ngSwitchCase="'date'">
+            <label for="{{formElement.formControlName}}">
+              <span>
+                {{formElement.label}}
+              </span>
+              <input id="{{formElement.formControlName}}" type="date" formControlName="{{formElement.formControlName}}">
+            </label>
+          </div>
+        </div>
+      </div>
+      <span class="error-message" *ngIf="formGroup.errors?.emptyField">Please complete all fields</span>
+      <span class="error-message" *ngIf="formGroup.errors?.invalidCompanyId">Company Doesn't existence!</span>
+
+      <div class="submit">
+        <input type="submit" [disabled]="" value="save" />
+      </div>
+    </form>
+  </div>
+</div>

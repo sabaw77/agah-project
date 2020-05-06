@@ -1,0 +1,54 @@
+<section>
+  <app-header>
+    <h1 id="header">
+      Companies
+    </h1>
+  </app-header>
+</section>
+
+<article id="company-form">
+  <button class="create-company-btn" (click)="showModal()">
+    Create Company
+  </button>
+  <app-modal [inputForm]="companyForm" (formData)="addCompany($event)" (closeModal)="closeModal()"
+    *ngIf="showCompanyForm">
+    <h2 id="modalHeader">Company</h2>
+  </app-modal>
+</article>
+<article *ngIf="companyList?.length">
+  <section class=" main-list">
+    <section class="header">
+      <h2 class="header-title">Companies</h2>
+      <h3 class="d-inline total">{{companyList.length}} Total</h3>
+    </section>
+    <section class="list-header">
+      <span>
+        Name
+      </span>
+      <span>
+        ID
+      </span>
+      <span>
+        Phone
+      </span>
+      <span>
+        Type
+      </span>
+    </section>
+    <section *ngFor="let company of companyList" class="list-row" (click)="goToProductPage(company)">
+      <span>
+        {{company.name}}
+      </span>
+      <span>
+        {{company.id}}
+      </span>
+      <span>
+        {{company.phone}}
+      </span>
+      <span>
+        {{company.type}}
+      </span>
+
+    </section>
+  </section>
+</article>

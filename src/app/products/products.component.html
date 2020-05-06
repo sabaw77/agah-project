@@ -1,0 +1,60 @@
+<section>
+  <app-header>
+    <h1 id="header">
+      Products
+    </h1>
+  </app-header>
+</section>
+
+<article id="product-form">
+  <button class="create-product-btn" (click)="showModal()">
+    Create Products
+  </button>
+  <app-modal [companyList]="companyList" [inputForm]="productForm" (formData)="addProduct($event)"
+    (closeModal)="closeModal()" *ngIf="showProductForm">
+    <h2 id="modalHeader">Product</h2>
+  </app-modal>
+</article>
+<article *ngIf="productList?.length">
+  <section class=" main-list rounded">
+    <section class="header">
+      <h2 class="mx-2 d-inline header-title">Products</h2>
+      <h3 class="d-inline total">{{productList.length}} Total</h3>
+    </section>
+    <section class="list-header">
+      <span>
+        Title
+      </span>
+      <span>
+        ID
+      </span>
+      <span>
+        Company ID
+      </span>
+      <span>
+        production time
+      </span>
+      <span>
+        Status
+      </span>
+    </section>
+    <section *ngFor="let product of productList" class="list-row">
+      <span>
+        {{product.title}}
+      </span>
+      <span>
+        {{product.id}}
+      </span>
+      <span>
+        {{product.companyId}}
+      </span>
+      <span>
+        {{product.productionTime}}
+      </span>
+      <span>
+        {{product.status}}
+      </span>
+
+    </section>
+  </section>
+</article>

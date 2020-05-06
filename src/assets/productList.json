@@ -1,0 +1,33 @@
+[{
+    "title": "product",
+    "id": "1",
+    "companyId": "2",
+    "productionTime": "2020-05-26",
+    "status": "active"
+
+  },
+  {
+    "title": "product",
+    "id": "2",
+    "companyId": "21",
+    "productionTime": "2020-05-28",
+    "status": "inactive"
+
+  },
+  {
+    "title": "product",
+    "id": "3",
+    "companyId": "10",
+    "productionTime": "2020-04-26",
+    "status": "active"
+
+  },
+  {
+    "title": "product",
+    "id": "4",
+    "companyId": "41",
+    "productionTime": "2020-05-26",
+    "status": "active"
+
+  }
+]

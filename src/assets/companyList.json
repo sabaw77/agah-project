@@ -1,0 +1,192 @@
+[{
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products",
+    "products": [{
+        "title": "product",
+        "id": 1,
+        "companyId": 2,
+        "productionTime": "2020-05-26",
+        "status": "active"
+      },
+      {
+        "title": "product",
+        "companyId": 1,
+        "productionTime": "2020-05-02",
+        "status": "inactive",
+        "id": 7
+      },
+      {
+        "title": "sdcsdv",
+        "companyId": 1,
+        "productionTime": "2020-05-22",
+        "status": "inactive",
+        "id": 8
+      },
+      {
+        "title": "21",
+        "companyId": 1,
+        "productionTime": "2020-05-05",
+        "status": "inactive",
+        "id": 11
+      },
+      {
+        "title": "212",
+        "companyId": 1,
+        "productionTime": "2020-05-21",
+        "status": "inactive",
+        "id": 13
+      }
+    ]
+
+  },
+  {
+    "name": "Company",
+    "id": 2,
+    "phone": "54469747946",
+    "type": "food products",
+    "products": [{
+        "title": "product",
+        "id": "2",
+        "companyId": "21",
+        "productionTime": "2020-05-28",
+        "status": "inactive"
+      },
+      {
+        "title": "esvsdv",
+        "companyId": 2,
+        "productionTime": "2020-05-14",
+        "status": "active",
+        "id": 19
+      },
+      {
+        "title": "product",
+        "companyId": 2,
+        "productionTime": "2020-05-12",
+        "status": "active",
+        "id": 5
+      }
+    ]
+
+  },
+  {
+    "name": "Company",
+    "id": 3,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 41,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 5,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  },
+  {
+    "name": "Company",
+    "id": 1,
+    "phone": "54469747946",
+    "type": "food products"
+
+  }
+]
